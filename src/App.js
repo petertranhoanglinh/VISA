@@ -9,6 +9,10 @@ import {Routes, Route} from 'react-router-dom'
 function App(){
   return (
     <div>
+       <div class="preloader flex-column justify-content-center align-items-center">
+          <img class="animation__shake" src="http://kalivisa.com/wp-content/uploads/2022/04/111111111111111.png" alt="VISA"
+                 className="brand-image img-circle elevation-3" height="60" width="60"/>
+      </div>
         <Nav></Nav>
         <Row></Row>
           <Routes>
@@ -20,6 +24,7 @@ function App(){
            
           </Routes>
         <Footer></Footer>
+        <aside class="control-sidebar control-sidebar-dark"></aside>
     </div>
     // Route path='/' element = {<Home></Home>}/>
   )

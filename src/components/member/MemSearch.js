@@ -1,16 +1,17 @@
 function MemSearch(){
-    return ( <div className="content-wrapper" style={{minHeight: '2080.12px'}}>
+    return ( 
+    <div className="content-wrapper">  
     {/* Content Header (Page header) */}
     <section className="content-header">
       <div className="container-fluid">
         <div className="row mb-2">
           <div className="col-sm-6">
-            <h1>jsGrid</h1>
+            <h1>DataTables</h1>
           </div>
           <div className="col-sm-6">
             <ol className="breadcrumb float-sm-right">
               <li className="breadcrumb-item"><a href="#">Home</a></li>
-              <li className="breadcrumb-item active">jsGrid</li>
+              <li className="breadcrumb-item active">DataTables</li>
             </ol>
           </div>
         </div>
@@ -18,17 +19,118 @@ function MemSearch(){
     </section>
     {/* Main content */}
     <section className="content">
-      <div className="card">
-        <div className="card-header">
-          <h3 className="card-title">jsGrid</h3>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12">
+            <div className="card">
+              <div className="card-header">
+                <h3 className="card-title">DataTable with minimal features &amp; hover style</h3>
+              </div>
+              {/* /.card-header */}
+              <div className="card-body">
+                <table id="example2" className="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>Rendering engine</th>
+                      <th>Browser</th>
+                      <th>Platform(s)</th>
+                      <th>Engine version</th>
+                      <th>CSS grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet
+                        Explorer 4.0
+                      </td>
+                      <td>Win 95+</td>
+                      <td> 4</td>
+                      <td>X</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet
+                        Explorer 5.0
+                      </td>
+                      <td>Win 95+</td>
+                      <td>5</td>
+                      <td>C</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet
+                        Explorer 5.5
+                      </td>
+                      <td>Win 95+</td>
+                      <td>5.5</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet
+                        Explorer 6
+                      </td>
+                      <td>Win 98+</td>
+                      <td>6</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet Explorer 7</td>
+                      <td>Win XP SP2+</td>
+                      <td>7</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>AOL browser (AOL desktop)</td>
+                      <td>Win XP</td>
+                      <td>6</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Gecko</td>
+                      <td>Firefox 1.0</td>
+                      <td>Win 98+ / OSX.2+</td>
+                      <td>1.7</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Gecko</td>
+                      <td>Firefox 1.5</td>
+                      <td>Win 98+ / OSX.2+</td>
+                      <td>1.8</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Gecko</td>
+                      <td>Firefox 2.0</td>
+                      <td>Win 98+ / OSX.2+</td>
+                      <td>1.8</td>
+                      <td>A</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>Rendering engine</th>
+                      <th>Browser</th>
+                      <th>Platform(s)</th>
+                      <th>Engine version</th>
+                      <th>CSS grade</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              {/* /.card-body */}
+            </div>
+            {/* /.card */}
+          </div>
+          {/* /.col */}
         </div>
-        {/* /.card-header */}
-        <div className="card-body">
-          <div id="jsGrid1" className="jsgrid" style={{position: 'relative', height: '100%', width: '100%'}}><div className="jsgrid-grid-header"><table className="jsgrid-table"><tbody><tr className="jsgrid-header-row"><th className="jsgrid-header-cell jsgrid-header-sortable" style={{width: '150px'}}>Name</th><th className="jsgrid-header-cell jsgrid-align-right jsgrid-header-sortable" style={{width: '50px'}}>Age</th><th className="jsgrid-header-cell jsgrid-header-sortable" style={{width: '200px'}}>Address</th><th className="jsgrid-header-cell jsgrid-align-center jsgrid-header-sortable" style={{width: '100px'}}>Country</th><th className="jsgrid-header-cell jsgrid-align-center jsgrid-header-sortable" style={{width: '100px'}}>Is Married</th></tr><tr className="jsgrid-filter-row" style={{display: 'none'}}><td className="jsgrid-cell" style={{width: '150px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}><input type="number" /></td><td className="jsgrid-cell" style={{width: '200px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><select><option value={0} /><option value={1}>United States</option><option value={2}>Canada</option><option value={3}>United Kingdom</option><option value={4}>France</option><option value={5}>Brazil</option><option value={6}>China</option><option value={7}>Russia</option></select></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" readOnly /></td></tr><tr className="jsgrid-insert-row" style={{display: 'none'}}><td className="jsgrid-cell" style={{width: '150px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}><input type="number" /></td><td className="jsgrid-cell" style={{width: '200px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><select><option value={0} /><option value={1}>United States</option><option value={2}>Canada</option><option value={3}>United Kingdom</option><option value={4}>France</option><option value={5}>Brazil</option><option value={6}>China</option><option value={7}>Russia</option></select></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" /></td></tr></tbody></table></div><div className="jsgrid-grid-body" style={{height: '1061px'}}><table className="jsgrid-table"><tbody><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Otto Clay</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>61</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #897-1459 Quam Avenue</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>China</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Connor Johnston</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>73</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #370-4647 Dis Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Lacey Hess</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>29</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #365-8835 Integer St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Timothy Henson</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>78</td><td className="jsgrid-cell" style={{width: '200px'}}>911-5143 Luctus Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Ramona Benton</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>43</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #614-689 Vehicula Street</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Ezra Tillman</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>51</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 738, 7583 Quisque St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Dante Carter</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>59</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 976, 6316 Lorem, St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Christopher Mcclure</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>58</td><td className="jsgrid-cell" style={{width: '200px'}}>847-4303 Dictum Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Ruby Rocha</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>62</td><td className="jsgrid-cell" style={{width: '200px'}}>5212 Sagittis Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Canada</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Imelda Hardin</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>39</td><td className="jsgrid-cell" style={{width: '200px'}}>719-7009 Auctor Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Jonah Johns</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>28</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 939, 9310 A Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Herman Rosa</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>49</td><td className="jsgrid-cell" style={{width: '200px'}}>718-7162 Molestie Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Arthur Gay</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>20</td><td className="jsgrid-cell" style={{width: '200px'}}>5497 Neque Street</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Xena Wilkerson</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>63</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #303-6974 Proin Street</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Lilah Atkins</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>33</td><td className="jsgrid-cell" style={{width: '200px'}}>622-8602 Gravida Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Malik Shepard</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>59</td><td className="jsgrid-cell" style={{width: '200px'}}>967-5176 Tincidunt Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Keely Silva</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>24</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 153, 8995 Praesent Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Hunter Pate</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>73</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 771, 7599 Ante, Road</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Mikayla Roach</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>55</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #438-9886 Donec Rd.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Upton Joseph</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>48</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #896-7592 Habitant St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>France</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr></tbody></table></div><div className="jsgrid-pager-container"><div className="jsgrid-pager">Pages: <span className="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button"><a href="javascript:void(0);">First</a></span> <span className="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button"><a href="javascript:void(0);">Prev</a></span> <span className="jsgrid-pager-page jsgrid-pager-current-page">1</span><span className="jsgrid-pager-page"><a href="javascript:void(0);">2</a></span><span className="jsgrid-pager-page"><a href="javascript:void(0);">3</a></span><span className="jsgrid-pager-page"><a href="javascript:void(0);">4</a></span><span className="jsgrid-pager-page"><a href="javascript:void(0);">5</a></span> <span className="jsgrid-pager-nav-button"><a href="javascript:void(0);">Next</a></span> <span className="jsgrid-pager-nav-button"><a href="javascript:void(0);">Last</a></span> &nbsp;&nbsp; 1 of 5 </div></div><div className="jsgrid-load-shader" style={{display: 'none', position: 'absolute', inset: '0px', zIndex: 1000}} /><div className="jsgrid-load-panel" style={{display: 'none', position: 'absolute', top: '50%', left: '50%', zIndex: 1000}}>Please, wait...</div></div>
-        </div>
-        {/* /.card-body */}
+        {/* /.row */}
       </div>
-      {/* /.card */}
+      {/* /.container-fluid */}
     </section>
     {/* /.content */}
   </div>)
