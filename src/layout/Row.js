@@ -8,9 +8,6 @@ function Row(){
           <img src="http://kalivisa.com/wp-content/uploads/2022/04/111111111111111.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
           <span className="brand-text font-weight-light">VISA</span>
         </a>
-        
-        <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
-         
         {/* Sidebar */}
         <div className="sidebar">
           {/* Sidebar user (optional) */}

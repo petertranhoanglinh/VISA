@@ -1,5 +1,5 @@
 function MemSearch(){
-    return (<section className="content">
+    return (<div className ="content-wrapper">
     <div className="container-fluid">
       <div className="row">
         <div className="col-12">
@@ -151,6 +151,6 @@ function MemSearch(){
       {/* /.row */}
     </div>
     {/* /.container-fluid */}
-  </section>)
+  </div>)
 }
 export default MemSearch;
