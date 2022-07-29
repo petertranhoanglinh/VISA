@@ -1,7 +1,8 @@
 import React from 'react';
 function Home(){
     return (
-        <div className="container-fluid">
+      <section className='content'>
+      <div className="container-fluid">
         <div className="row">
           <div className="col-lg-6">
             <div className="card">
@@ -238,6 +239,7 @@ function Home(){
         </div>
         {/* /.row */}
       </div>
+      </section>
     );
 }
  export default Home

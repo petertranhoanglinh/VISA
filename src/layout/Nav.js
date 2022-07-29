@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/role-supports-aria-props */
-
+import {Link} from 'react-router-dom'
 import React from 'react';
 
 function  Nav(){
@@ -11,7 +11,7 @@ function  Nav(){
           <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
         </li>
         <li className="nav-item d-none d-sm-inline-block">
-          <a href="/Home" className="nav-link">Home</a>
+          <Link to={'/'} className="nav-link">Home</Link>
         </li>
         <li className="nav-item d-none d-sm-inline-block">
           <a href="#" className="nav-link">Contact</a>

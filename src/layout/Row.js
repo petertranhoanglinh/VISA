@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
+import {Link} from 'react-router-dom'
 function Row(){
     return (
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
@@ -15,7 +16,7 @@ function Row(){
           {/* Sidebar user (optional) */}
           <div className="user-panel mt-3 pb-3 mb-3 d-flex">
             <div className="info">
-              <a href="1" className="d-block">Lê Thị Thu Thanh</a>
+              <a href="1" className="d-block">Quản Lý VISA</a>
             </div>
             
           </div>
@@ -68,10 +69,31 @@ function Row(){
                 <a href="../widgets.html" className="nav-link">
                   <i className="nav-icon fas fa-th" />
                   <p>
-                    Widgets
-                    <span className="right badge badge-danger">New</span>
+                    Thành viên
+                    <i className="right fas fa-angle-left" />
+                    <span className="badge badge-info right">3</span>
                   </p>
                 </a>
+                <ul className="nav nav-treeview">
+                  <li className="nav-item">
+                    <Link to={'/regmember'} className="nav-link">
+                      <i className="far fa-circle nav-icon" />
+                      <p>Đăng ký thành viên</p>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <a href="../../index2.html" className="nav-link">
+                      <i className="far fa-circle nav-icon" />
+                      <p>Thay đổi thành viên</p>
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a href="../../index3.html" className="nav-link">
+                      <i className="far fa-circle nav-icon" />
+                      <p>Tìm kiếm thành viên</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <a href="1" className="nav-link">
