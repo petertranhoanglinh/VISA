@@ -82,10 +82,10 @@ function Row(){
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <a href="../../index2.html" className="nav-link">
-                      <i className="far fa-circle nav-icon" />
-                      <p>Thay đổi thành viên</p>
-                    </a>
+                     <Link to={'/memedit'} className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Thay đổi thành viên</p>
+                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link to={'/memsearch'} className="nav-link">
