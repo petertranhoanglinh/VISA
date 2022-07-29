@@ -1,156 +1,36 @@
 function MemSearch(){
-    return (<div className ="content-wrapper">
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-12">
-          <div className="card">
-            <div className="card-header">
-              <h3 className="card-title">DataTable with minimal features &amp; hover style</h3>
-            </div>
-            {/* /.card-header */}
-            <div className="card-body">
-              <div id="example2_wrapper" className="dataTables_wrapper dt-bootstrap4"><div className="row"><div className="col-sm-12 col-md-6" /><div className="col-sm-12 col-md-6" /></div><div className="row"><div className="col-sm-12"><table id="example2" className="table table-bordered table-hover dataTable dtr-inline" aria-describedby="example2_info">
-                      <thead>
-                        <tr><th className="sorting sorting_asc" tabIndex={0} aria-controls="example2" rowSpan={1} colSpan={1} aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Rendering engine</th><th className="sorting" tabIndex={0} aria-controls="example2" rowSpan={1} colSpan={1} aria-label="Browser: activate to sort column ascending">Browser</th><th className="sorting" tabIndex={0} aria-controls="example2" rowSpan={1} colSpan={1} aria-label="Platform(s): activate to sort column ascending">Platform(s)</th><th className="sorting" tabIndex={0} aria-controls="example2" rowSpan={1} colSpan={1} aria-label="Engine version: activate to sort column ascending">Engine version</th><th className="sorting" tabIndex={0} aria-controls="example2" rowSpan={1} colSpan={1} aria-label="CSS grade: activate to sort column ascending">CSS grade</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr className="odd">
-                          <td className="sorting_1 dtr-control">Webkit</td>
-                          <td>Safari 1.2</td>
-                          <td>OSX.3</td>
-                          <td>125.5</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="sorting_1 dtr-control">Webkit</td>
-                          <td>Safari 1.3</td>
-                          <td>OSX.3</td>
-                          <td>312.8</td>
-                          <td>A</td>
-                        </tr><tr className="odd">
-                          <td className="sorting_1 dtr-control">Webkit</td>
-                          <td>Safari 2.0</td>
-                          <td>OSX.4+</td>
-                          <td>419.3</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="sorting_1 dtr-control">Webkit</td>
-                          <td>Safari 3.0</td>
-                          <td>OSX.4+</td>
-                          <td>522.1</td>
-                          <td>A</td>
-                        </tr><tr className="odd">
-                          <td className="sorting_1 dtr-control">Webkit</td>
-                          <td>OmniWeb 5.5</td>
-                          <td>OSX.4+</td>
-                          <td>420</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="sorting_1 dtr-control">Webkit</td>
-                          <td>iPod Touch / iPhone</td>
-                          <td>iPod</td>
-                          <td>420.1</td>
-                          <td>A</td>
-                        </tr><tr className="odd">
-                          <td className="sorting_1 dtr-control">Webkit</td>
-                          <td>S60</td>
-                          <td>S60</td>
-                          <td>413</td>
-                          <td>A</td>
-                        </tr></tbody>
-                      <tfoot>
-                        <tr><th rowSpan={1} colSpan={1}>Rendering engine</th><th rowSpan={1} colSpan={1}>Browser</th><th rowSpan={1} colSpan={1}>Platform(s)</th><th rowSpan={1} colSpan={1}>Engine version</th><th rowSpan={1} colSpan={1}>CSS grade</th></tr>
-                      </tfoot>
-                    </table></div></div><div className="row"><div className="col-sm-12 col-md-5"><div className="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 51 to 57 of 57 entries</div></div><div className="col-sm-12 col-md-7"><div className="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul className="pagination"><li className="paginate_button page-item previous" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx={0} tabIndex={0} className="page-link">Previous</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx={1} tabIndex={0} className="page-link">1</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx={2} tabIndex={0} className="page-link">2</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx={3} tabIndex={0} className="page-link">3</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx={4} tabIndex={0} className="page-link">4</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx={5} tabIndex={0} className="page-link">5</a></li><li className="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx={6} tabIndex={0} className="page-link">6</a></li><li className="paginate_button page-item next disabled" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx={7} tabIndex={0} className="page-link">Next</a></li></ul></div></div></div></div>
-            </div>
-            {/* /.card-body */}
+    return ( <div className="content-wrapper" style={{minHeight: '2080.12px'}}>
+    {/* Content Header (Page header) */}
+    <section className="content-header">
+      <div className="container-fluid">
+        <div className="row mb-2">
+          <div className="col-sm-6">
+            <h1>jsGrid</h1>
           </div>
-          {/* /.card */}
-          <div className="card">
-            <div className="card-header">
-              <h3 className="card-title">DataTable with default features</h3>
-            </div>
-            {/* /.card-header */}
-            <div className="card-body">
-              <div id="example1_wrapper" className="dataTables_wrapper dt-bootstrap4"><div className="row"><div className="col-sm-12 col-md-6"><div className="dt-buttons btn-group flex-wrap">               <button className="btn btn-secondary buttons-copy buttons-html5" tabIndex={0} aria-controls="example1" type="button"><span>Copy</span></button> <button className="btn btn-secondary buttons-csv buttons-html5" tabIndex={0} aria-controls="example1" type="button"><span>CSV</span></button> <button className="btn btn-secondary buttons-excel buttons-html5" tabIndex={0} aria-controls="example1" type="button"><span>Excel</span></button> <button className="btn btn-secondary buttons-pdf buttons-html5" tabIndex={0} aria-controls="example1" type="button"><span>PDF</span></button> <button className="btn btn-secondary buttons-print" tabIndex={0} aria-controls="example1" type="button"><span>Print</span></button> <div className="btn-group"><button className="btn btn-secondary buttons-collection dropdown-toggle buttons-colvis" tabIndex={0} aria-controls="example1" type="button" aria-haspopup="true"><span>Column visibility</span><span className="dt-down-arrow" /></button></div> </div></div><div className="col-sm-12 col-md-6"><div id="example1_filter" className="dataTables_filter"><label>Search:<input type="search" className="form-control form-control-sm" placeholder aria-controls="example1" /></label></div></div></div><div className="row"><div className="col-sm-12"><table id="example1" className="table table-bordered table-striped dataTable dtr-inline" aria-describedby="example1_info">
-                      <thead>
-                        <tr><th className="sorting sorting_asc" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Rendering engine</th><th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-label="Browser: activate to sort column ascending">Browser</th><th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-label="Platform(s): activate to sort column ascending">Platform(s)</th><th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-label="Engine version: activate to sort column ascending">Engine version</th><th className="sorting" tabIndex={0} aria-controls="example1" rowSpan={1} colSpan={1} aria-label="CSS grade: activate to sort column ascending">CSS grade</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr className="odd">
-                          <td className="dtr-control sorting_1" tabIndex={0}>Gecko</td>
-                          <td>Firefox 1.0</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td>1.7</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="dtr-control sorting_1" tabIndex={0}>Gecko</td>
-                          <td>Firefox 1.5</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td>1.8</td>
-                          <td>A</td>
-                        </tr><tr className="odd">
-                          <td className="dtr-control sorting_1" tabIndex={0}>Gecko</td>
-                          <td>Firefox 2.0</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td>1.8</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="dtr-control sorting_1" tabIndex={0}>Gecko</td>
-                          <td>Firefox 3.0</td>
-                          <td>Win 2k+ / OSX.3+</td>
-                          <td>1.9</td>
-                          <td>A</td>
-                        </tr><tr className="odd">
-                          <td className="sorting_1 dtr-control">Gecko</td>
-                          <td>Camino 1.0</td>
-                          <td>OSX.2+</td>
-                          <td>1.8</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="sorting_1 dtr-control">Gecko</td>
-                          <td>Camino 1.5</td>
-                          <td>OSX.3+</td>
-                          <td>1.8</td>
-                          <td>A</td>
-                        </tr><tr className="odd">
-                          <td className="sorting_1 dtr-control">Gecko</td>
-                          <td>Netscape 7.2</td>
-                          <td>Win 95+ / Mac OS 8.6-9.2</td>
-                          <td>1.7</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="sorting_1 dtr-control">Gecko</td>
-                          <td>Netscape Browser 8</td>
-                          <td>Win 98SE+</td>
-                          <td>1.7</td>
-                          <td>A</td>
-                        </tr><tr className="odd">
-                          <td className="sorting_1 dtr-control">Gecko</td>
-                          <td>Netscape Navigator 9</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td>1.8</td>
-                          <td>A</td>
-                        </tr><tr className="even">
-                          <td className="sorting_1 dtr-control">Gecko</td>
-                          <td>Mozilla 1.0</td>
-                          <td>Win 95+ / OSX.1+</td>
-                          <td>1</td>
-                          <td>A</td>
-                        </tr></tbody>
-                      <tfoot>
-                        <tr><th rowSpan={1} colSpan={1}>Rendering engine</th><th rowSpan={1} colSpan={1}>Browser</th><th rowSpan={1} colSpan={1}>Platform(s)</th><th rowSpan={1} colSpan={1}>Engine version</th><th rowSpan={1} colSpan={1}>CSS grade</th></tr>
-                      </tfoot>
-                    </table></div></div><div className="row"><div className="col-sm-12 col-md-5"><div className="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div className="col-sm-12 col-md-7"><div className="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul className="pagination"><li className="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx={0} tabIndex={0} className="page-link">Previous</a></li><li className="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx={1} tabIndex={0} className="page-link">1</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx={2} tabIndex={0} className="page-link">2</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx={3} tabIndex={0} className="page-link">3</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx={4} tabIndex={0} className="page-link">4</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx={5} tabIndex={0} className="page-link">5</a></li><li className="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx={6} tabIndex={0} className="page-link">6</a></li><li className="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx={7} tabIndex={0} className="page-link">Next</a></li></ul></div></div></div></div>
-            </div>
-            {/* /.card-body */}
+          <div className="col-sm-6">
+            <ol className="breadcrumb float-sm-right">
+              <li className="breadcrumb-item"><a href="#">Home</a></li>
+              <li className="breadcrumb-item active">jsGrid</li>
+            </ol>
           </div>
-          {/* /.card */}
         </div>
-        {/* /.col */}
+      </div>{/* /.container-fluid */}
+    </section>
+    {/* Main content */}
+    <section className="content">
+      <div className="card">
+        <div className="card-header">
+          <h3 className="card-title">jsGrid</h3>
+        </div>
+        {/* /.card-header */}
+        <div className="card-body">
+          <div id="jsGrid1" className="jsgrid" style={{position: 'relative', height: '100%', width: '100%'}}><div className="jsgrid-grid-header"><table className="jsgrid-table"><tbody><tr className="jsgrid-header-row"><th className="jsgrid-header-cell jsgrid-header-sortable" style={{width: '150px'}}>Name</th><th className="jsgrid-header-cell jsgrid-align-right jsgrid-header-sortable" style={{width: '50px'}}>Age</th><th className="jsgrid-header-cell jsgrid-header-sortable" style={{width: '200px'}}>Address</th><th className="jsgrid-header-cell jsgrid-align-center jsgrid-header-sortable" style={{width: '100px'}}>Country</th><th className="jsgrid-header-cell jsgrid-align-center jsgrid-header-sortable" style={{width: '100px'}}>Is Married</th></tr><tr className="jsgrid-filter-row" style={{display: 'none'}}><td className="jsgrid-cell" style={{width: '150px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}><input type="number" /></td><td className="jsgrid-cell" style={{width: '200px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><select><option value={0} /><option value={1}>United States</option><option value={2}>Canada</option><option value={3}>United Kingdom</option><option value={4}>France</option><option value={5}>Brazil</option><option value={6}>China</option><option value={7}>Russia</option></select></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" readOnly /></td></tr><tr className="jsgrid-insert-row" style={{display: 'none'}}><td className="jsgrid-cell" style={{width: '150px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}><input type="number" /></td><td className="jsgrid-cell" style={{width: '200px'}}><input type="text" /></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><select><option value={0} /><option value={1}>United States</option><option value={2}>Canada</option><option value={3}>United Kingdom</option><option value={4}>France</option><option value={5}>Brazil</option><option value={6}>China</option><option value={7}>Russia</option></select></td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" /></td></tr></tbody></table></div><div className="jsgrid-grid-body" style={{height: '1061px'}}><table className="jsgrid-table"><tbody><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Otto Clay</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>61</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #897-1459 Quam Avenue</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>China</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Connor Johnston</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>73</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #370-4647 Dis Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Lacey Hess</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>29</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #365-8835 Integer St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Timothy Henson</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>78</td><td className="jsgrid-cell" style={{width: '200px'}}>911-5143 Luctus Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Ramona Benton</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>43</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #614-689 Vehicula Street</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Ezra Tillman</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>51</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 738, 7583 Quisque St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Dante Carter</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>59</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 976, 6316 Lorem, St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Christopher Mcclure</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>58</td><td className="jsgrid-cell" style={{width: '200px'}}>847-4303 Dictum Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Ruby Rocha</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>62</td><td className="jsgrid-cell" style={{width: '200px'}}>5212 Sagittis Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Canada</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Imelda Hardin</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>39</td><td className="jsgrid-cell" style={{width: '200px'}}>719-7009 Auctor Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Jonah Johns</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>28</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 939, 9310 A Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Herman Rosa</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>49</td><td className="jsgrid-cell" style={{width: '200px'}}>718-7162 Molestie Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Arthur Gay</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>20</td><td className="jsgrid-cell" style={{width: '200px'}}>5497 Neque Street</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Xena Wilkerson</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>63</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #303-6974 Proin Street</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Lilah Atkins</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>33</td><td className="jsgrid-cell" style={{width: '200px'}}>622-8602 Gravida Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Malik Shepard</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>59</td><td className="jsgrid-cell" style={{width: '200px'}}>967-5176 Tincidunt Av.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Keely Silva</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>24</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 153, 8995 Praesent Ave</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>United States</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Hunter Pate</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>73</td><td className="jsgrid-cell" style={{width: '200px'}}>P.O. Box 771, 7599 Ante, Road</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Russia</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-row"><td className="jsgrid-cell" style={{width: '150px'}}>Mikayla Roach</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>55</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #438-9886 Donec Rd.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>Brazil</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr><tr className="jsgrid-alt-row"><td className="jsgrid-cell" style={{width: '150px'}}>Upton Joseph</td><td className="jsgrid-cell jsgrid-align-right" style={{width: '50px'}}>48</td><td className="jsgrid-cell" style={{width: '200px'}}>Ap #896-7592 Habitant St.</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}>France</td><td className="jsgrid-cell jsgrid-align-center" style={{width: '100px'}}><input type="checkbox" disabled /></td></tr></tbody></table></div><div className="jsgrid-pager-container"><div className="jsgrid-pager">Pages: <span className="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button"><a href="javascript:void(0);">First</a></span> <span className="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button"><a href="javascript:void(0);">Prev</a></span> <span className="jsgrid-pager-page jsgrid-pager-current-page">1</span><span className="jsgrid-pager-page"><a href="javascript:void(0);">2</a></span><span className="jsgrid-pager-page"><a href="javascript:void(0);">3</a></span><span className="jsgrid-pager-page"><a href="javascript:void(0);">4</a></span><span className="jsgrid-pager-page"><a href="javascript:void(0);">5</a></span> <span className="jsgrid-pager-nav-button"><a href="javascript:void(0);">Next</a></span> <span className="jsgrid-pager-nav-button"><a href="javascript:void(0);">Last</a></span> &nbsp;&nbsp; 1 of 5 </div></div><div className="jsgrid-load-shader" style={{display: 'none', position: 'absolute', inset: '0px', zIndex: 1000}} /><div className="jsgrid-load-panel" style={{display: 'none', position: 'absolute', top: '50%', left: '50%', zIndex: 1000}}>Please, wait...</div></div>
+        </div>
+        {/* /.card-body */}
       </div>
-      {/* /.row */}
-    </div>
-    {/* /.container-fluid */}
+      {/* /.card */}
+    </section>
+    {/* /.content */}
   </div>)
 }
 export default MemSearch;

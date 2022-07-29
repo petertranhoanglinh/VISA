@@ -1,6 +1,7 @@
 function MemEdit(){
     return (
         <div className ="content-wrapper">
+            <section class="content"></section>
              <div className="container-fluid">
              <div className="card card-info">
         <div className="card-header">
