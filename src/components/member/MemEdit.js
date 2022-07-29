@@ -1,6 +1,6 @@
 function MemEdit(){
     return (
-        <section className="content">
+        <div className ="content-wrapper">
              <div className="container-fluid">
              <div className="card card-info">
         <div className="card-header">
@@ -41,7 +41,7 @@ function MemEdit(){
         {/* /.card-body */}
       </div>
              </div>
-        </section>
+        </div>
     )
 }
 export default MemEdit;

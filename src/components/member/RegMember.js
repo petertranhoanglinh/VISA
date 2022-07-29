@@ -1,5 +1,6 @@
 function RegMember(){
-    return ( <section className="content">
+    return (  
+  <div className ="content-wrapper">
     <div className="container-fluid">
       <div className="row">
         {/* left column */}
@@ -47,6 +48,6 @@ function RegMember(){
       </div>
       {/* /.row */}
     </div>{/* /.container-fluid */}
-  </section>)
+  </div>)
 }
 export default RegMember;

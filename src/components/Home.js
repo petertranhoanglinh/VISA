@@ -1,7 +1,7 @@
 import React from 'react';
 function Home(){
     return (
-      <section className='content'>
+      <div className ="content-wrapper">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-6">
@@ -239,7 +239,7 @@ function Home(){
         </div>
         {/* /.row */}
       </div>
-      </section>
+      </div>
     );
 }
  export default Home
