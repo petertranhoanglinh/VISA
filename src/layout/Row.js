@@ -88,10 +88,10 @@ function Row(){
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="../../index3.html" className="nav-link">
+                    <Link to={'/memsearch'} className="nav-link">
                       <i className="far fa-circle nav-icon" />
-                      <p>Tìm kiếm thành viên</p>
-                    </a>
+                      <p>Tìm Kiếm Thành Viên</p>
+                    </Link>
                   </li>
                 </ul>
               </li>
