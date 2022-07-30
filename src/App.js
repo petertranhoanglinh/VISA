@@ -5,6 +5,7 @@ import Footer from './layout/Footer'
 import RegMember from './components/member/RegMember'
 import MemSearch from './components/member/MemSearch'
 import MemEdit from './components/member/MemEdit'
+import Login from './components/Login'
 import {Routes, Route} from 'react-router-dom'
 function App(){
   return (
@@ -17,10 +18,15 @@ function App(){
         <Row></Row>
           <Routes>
             <Route path='/' element = {<Home></Home>}></Route>
+             {/* login */}
+             <Route path='/login' element = {<Login></Login>}></Route>
              {/* Member  */}
             <Route path='/regmember' element = {<RegMember></RegMember>}></Route>
             <Route path='/memedit' element = {<MemEdit></MemEdit>}></Route>
             <Route path='/memsearch' element = {<MemSearch></MemSearch>}></Route>
+            
+            <Route path='/memsearch' element = {<MemSearch></MemSearch>}></Route>
+
            
           </Routes>
         <Footer></Footer>
