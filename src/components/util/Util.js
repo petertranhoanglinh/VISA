@@ -27,17 +27,6 @@ function setComma(n) {
   return n;
 }
 
-function checkLogin() {
-  fetch(this.URL_REST + "api/checkLogin/" + localStorage.getItem("token"), {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((json) => {
-      localStorage.setItem("checkLogin", json);
-    });
-  //window.location.href = this.URL + "home";
-}
-
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   swal,
@@ -47,5 +36,4 @@ export default {
   userDetail,
   headersListSave,
   setComma,
-  checkLogin,
 };

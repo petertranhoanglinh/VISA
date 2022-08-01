@@ -1,5 +1,6 @@
 import React from "react";
 import Util from "../components/util/Util";
+import App from "../App";
 export default class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -36,10 +37,8 @@ export default class Login extends React.Component {
         throw Error(response.status);
       })
       .then((result) => {
-        console.log(result);
         localStorage.setItem("token", result.jwt);
         localStorage.setItem("userDetail", JSON.stringify(result.userDetail));
-        Util.checkLogin();
         window.location.href = Util.URL + "home";
       })
       .catch((error) => {

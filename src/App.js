@@ -9,7 +9,16 @@ import Login from "./screen/Login";
 import { Routes, Route } from "react-router-dom";
 import Util from "./components/util/Util";
 function App() {
-  Util.checkLogin();
+  function checkLogin() {
+    fetch(Util.URL_REST + "api/checkLogin/" + localStorage.getItem("token"), {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        localStorage.setItem("checkLogin", json);
+      });
+  }
+  checkLogin();
   return (
     <div>
       <div class="preloader flex-column justify-content-center align-items-center">
