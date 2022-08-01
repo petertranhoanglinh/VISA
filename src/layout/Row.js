@@ -13,7 +13,7 @@ function Row(){
           {/* Sidebar user (optional) */}
           <div className="user-panel mt-3 pb-3 mb-3 d-flex">
             <div className="info">
-              <a href="1" className="d-block">Quản Lý VISA</a>
+              <Link to={"/login"} className="d-block">Login</Link>
             </div>
             
           </div>

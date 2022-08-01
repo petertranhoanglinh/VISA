@@ -19,7 +19,7 @@ function MemEdit() {
         </div>
         {/* /.container-fluid */}
       </section>
-      <section class="content"></section>
+      <section class="content">
       <div className="container-fluid">
         <div className="card card-info">
           <div className="card-header">
@@ -81,6 +81,7 @@ function MemEdit() {
           {/* /.card-body */}
         </div>
       </div>
+      </section>
     </div>
   );
 }
