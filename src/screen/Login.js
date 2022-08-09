@@ -1,6 +1,5 @@
 import React from "react";
 import Util from "../components/util/Util";
-import App from "../App";
 export default class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -9,11 +8,13 @@ export default class Login extends React.Component {
       password: "",
     };
     //this.setParams = this.setParams.bind(this) ;
+    this.login = this.login.bind(this);
   }
 
   setParams = (event) => {
     this.setState({ [event.target.name]: event.target.value.trim() });
   };
+
   login = () => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");

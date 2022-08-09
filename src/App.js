@@ -20,7 +20,7 @@ function App() {
   }
   checkLogin();
   return (
-    <>
+    <div>
       <div class="preloader flex-column justify-content-center align-items-center">
         <img
           class="animation__shake"
@@ -51,7 +51,7 @@ function App() {
 
       <Footer></Footer>
       <aside class="control-sidebar control-sidebar-dark"></aside>
-    </>
+    </div>
     // Route path='/' element = {<Home></Home>}/>
   );
 }

@@ -26,6 +26,22 @@ function setComma(n) {
   }
   return n;
 }
+function coverSwal(text, icon) {
+  swal(text, {
+    buttons: {
+      OK: true,
+    },
+    icon: icon,
+  }).then((value) => {
+    switch (value) {
+      case "OK":
+        window.location.reload(true);
+        break;
+      default:
+        return false;
+    }
+  });
+}
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -36,4 +52,5 @@ export default {
   userDetail,
   headersListSave,
   setComma,
+  coverSwal,
 };
