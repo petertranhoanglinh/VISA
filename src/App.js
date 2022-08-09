@@ -15,12 +15,12 @@ function App() {
     })
       .then((res) => res.json())
       .then((json) => {
-        localStorage.setItem("checkLogin", json);
+        localStorage.setItem("checkLogin", "true");
       });
   }
   checkLogin();
   return (
-    <div>
+    <>
       <div class="preloader flex-column justify-content-center align-items-center">
         <img
           class="animation__shake"
@@ -51,7 +51,7 @@ function App() {
 
       <Footer></Footer>
       <aside class="control-sidebar control-sidebar-dark"></aside>
-    </div>
+    </>
     // Route path='/' element = {<Home></Home>}/>
   );
 }
