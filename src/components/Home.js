@@ -1,5 +1,5 @@
 import React from "react";
-function Home() {
+function Home(props) {
   return (
     <div className="content-wrapper">
       {/* Content Header (Page header) */}

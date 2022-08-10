@@ -1,4 +1,44 @@
+import React, { useState } from "react";
+import Util from "../util/Util";
+const token = localStorage.getItem("token");
+const AuthStr = "Bearer " + token;
 function RegMember() {
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleInput = () => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var raw = JSON.stringify({
+      name: name,
+      mobile: mobile,
+      email: email,
+      address: address,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: Util.headersList,
+      body: raw,
+      redirect: "follow",
+    };
+    fetch(Util.URL_REST + "consumer/save", requestOptions)
+      .then((response) => {
+        console.log(response);
+        if (response.ok) {
+          return response.json();
+        }
+        throw Error(response.status);
+      })
+      .then((result) => {
+        alert("consumer Register");
+      })
+      .catch((error) => {
+        alert("consumer fail");
+      });
+  };
   return (
     <div className="content-wrapper">
       <div className="container-fluid">
@@ -17,8 +57,9 @@ function RegMember() {
                   <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Họ Và Tên</label>
                     <input
+                      onChange={(e) => setName(e.target.value)}
                       type="text"
-                      name="email"
+                      name="name"
                       className="form-control"
                       id="exampleInputEmail1"
                       aria-describedby="exampleInputEmail1-error"
@@ -29,7 +70,7 @@ function RegMember() {
                     <label htmlFor="exampleInputPassword1">Số Điện Thoại</label>
                     <input
                       type="text"
-                      name="password"
+                      onChange={(e) => setMobile(e.target.value)}
                       className="form-control"
                       id="exampleInputPassword1"
                       aria-describedby="exampleInputPassword1-error"
@@ -42,7 +83,7 @@ function RegMember() {
                     </label>
                     <input
                       type="text"
-                      name="password"
+                      onChange={(e) => setAddress(e.target.value)}
                       className="form-control"
                       id="exampleInputPassword1"
                       aria-describedby="exampleInputPassword1-error"
@@ -53,7 +94,7 @@ function RegMember() {
                     <label htmlFor="exampleInputPassword1">Địa Chỉ Email</label>
                     <input
                       type="email"
-                      name="password"
+                      onChange={(e) => setEmail(e.target.value)}
                       className="form-control"
                       id="exampleInputPassword1"
                       aria-describedby="exampleInputPassword1-error"
@@ -63,7 +104,11 @@ function RegMember() {
                 </div>
                 {/* /.card-body */}
                 <div className="card-footer">
-                  <button type="submit" className="btn btn-primary">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={() => handleInput()}
+                  >
                     Submit
                   </button>
                 </div>
