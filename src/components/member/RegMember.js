@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Util from "../util/Util";
-const token = localStorage.getItem("token");
-const AuthStr = "Bearer " + token;
 function RegMember() {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
@@ -33,7 +31,11 @@ function RegMember() {
         throw Error(response.status);
       })
       .then((result) => {
-        alert("consumer Register");
+        if (result.status === "0001") {
+          Util.swal("", result.returnMessage, "success");
+        } else {
+          Util.swal("", result.returnMessage, "error");
+        }
       })
       .catch((error) => {
         alert("consumer fail");
@@ -109,7 +111,7 @@ function RegMember() {
                     className="btn btn-primary"
                     onClick={() => handleInput()}
                   >
-                    Submit
+                    Lưu
                   </button>
                 </div>
               </form>

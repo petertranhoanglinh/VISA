@@ -1,4 +1,18 @@
-function MemSearch() {
+import React, { useState, useEffect } from "react";
+import Pagination from "react-js-pagination";
+import Util from "../util/Util";
+function MemSearch(props) {
+  const [state, setState] = useState([]);
+  const [activePage, setActivePage] = useState([]);
+  // using user effect;
+  useEffect(() => {
+    fetch("/api/data").then((res) => setState(res.data));
+  });
+
+  const handlePageChange = (pageNumber) => {
+    setActivePage(pageNumber);
+    //alert(pageNumber);
+  };
   return (
     <div class="content-wrapper">
       <section className="content">
@@ -7,7 +21,7 @@ function MemSearch() {
             <div className="col-12">
               <div className="card">
                 <div className="card-header">
-                  <h3 className="card-title">Fixed Header Table</h3>
+                  <h3 className="card-title">Thông Tin Thành Viên</h3>
                   <div className="card-tools">
                     <div className="input-group input-group-sm">
                       <input
@@ -29,113 +43,33 @@ function MemSearch() {
                   <table className="table table-head-fixed text-nowrap">
                     <thead>
                       <tr>
-                        <th>ID</th>
-                        <th>User</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Reason</th>
+                        <th>Xóa</th>
+                        <th>Sửa</th>
+                        <th>Số TV</th>
+                        <th>Tên TV</th>
+                        <th>Ngày Đăng Ký</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Địa chỉ</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>183</td>
+                        <td>
+                          <i class="bi bi-trash"></i>
+                        </td>
+                        <td>
+                          <i class="fa-regular fa-pen-to-square"></i>
+                        </td>
+                        <td>1</td>
                         <td>John Doe</td>
                         <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-success">Approved</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>219</td>
-                        <td>Alexander Pierce</td>
-                        <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-warning">Pending</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>657</td>
-                        <td>Bob Doe</td>
-                        <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-primary">Approved</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>175</td>
-                        <td>Mike Doe</td>
-                        <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-danger">Denied</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>134</td>
-                        <td>Jim Doe</td>
-                        <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-success">Approved</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>494</td>
-                        <td>Victoria Doe</td>
-                        <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-warning">Pending</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>832</td>
-                        <td>Michael Doe</td>
-                        <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-primary">Approved</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>982</td>
-                        <td>Rocky Doe</td>
-                        <td>11-7-2014</td>
-                        <td>
-                          <span className="tag tag-danger">Denied</span>
-                        </td>
-                        <td>
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
+                        <td> </td>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+
                 {/* /.card-body */}
               </div>
               {/* /.card */}
@@ -145,6 +79,12 @@ function MemSearch() {
         </div>
         {/* /.container-fluid */}
       </section>
+      <Pagination
+        activePage={activePage}
+        itemsCountPerPage={10}
+        totalItemsCount={4500}
+        onChange={handlePageChange.bind(this)}
+      />
     </div>
   );
 }
