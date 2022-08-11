@@ -3,11 +3,12 @@ import Pagination from "react-js-pagination";
 import Util from "../util/Util";
 function MemSearch(props) {
   const [data, setData] = useState({ cons: [] });
+  const [mobile, setMobile] = useState(["*"]);
   const [activePage, setActivePage] = useState([]);
   // using user effect;
   useEffect(() => {
     const getCons = async () => {
-      fetch(Util.URL_REST + "api/consumer/all/0582163211", {
+      fetch(Util.URL_REST + "api/consumer/all/" + mobile, {
         method: "GET",
         headers: Util.headersList,
       })
@@ -19,10 +20,10 @@ function MemSearch(props) {
     getCons();
   }, []);
 
-  const handlePageChange = (pageNumber) => {
+  function handlePageChange(pageNumber) {
     setActivePage(pageNumber);
     //alert(pageNumber);
-  };
+  }
   return (
     <div class="content-wrapper">
       <section className="content">
@@ -49,7 +50,7 @@ function MemSearch(props) {
                   </div>
                 </div>
                 {/* /.card-header */}
-                <div className="card-body table-responsive p-0">
+                <div className="card-body table-responsive p-200">
                   <table className="table table-head-fixed text-nowrap">
                     <thead>
                       <tr>
@@ -74,10 +75,10 @@ function MemSearch(props) {
                           </td>
                           <td>{d.id}</td>
                           <td>{d.name}</td>
-                          <td>11-7-2014</td>
-                          <td> </td>
-                          <td></td>
-                          <td>Lê thị thu thanh</td>
+                          <td>{d.workDate}</td>
+                          <td>{d.mobile}</td>
+                          <td>{d.address}</td>
+                          <td>{d.workUser}</td>
                         </tr>
                       ))}
                     </tbody>
