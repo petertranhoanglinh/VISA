@@ -22,7 +22,7 @@ function RegMember() {
       body: raw,
       redirect: "follow",
     };
-    fetch(Util.URL_REST + "consumer/save", requestOptions)
+    fetch(Util.URL_REST + "api/consumer/save", requestOptions)
       .then((response) => {
         console.log(response);
         if (response.ok) {

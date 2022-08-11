@@ -2,12 +2,22 @@ import React, { useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
 import Util from "../util/Util";
 function MemSearch(props) {
-  const [state, setState] = useState([]);
+  const [data, setData] = useState({ cons: [] });
   const [activePage, setActivePage] = useState([]);
   // using user effect;
   useEffect(() => {
-    fetch("/api/data").then((res) => setState(res.data));
-  });
+    const getCons = async () => {
+      fetch(Util.URL_REST + "api/consumer/all/0582163211", {
+        method: "GET",
+        headers: Util.headersList,
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          setData({ cons: json });
+        });
+    };
+    getCons();
+  }, []);
 
   const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
@@ -50,22 +60,26 @@ function MemSearch(props) {
                         <th>Ngày Đăng Ký</th>
                         <th>Số Điện Thoại</th>
                         <th>Địa chỉ</th>
+                        <th>Người Quản Lý</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <i class="bi bi-trash"></i>
-                        </td>
-                        <td>
-                          <i class="fa-regular fa-pen-to-square"></i>
-                        </td>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>11-7-2014</td>
-                        <td> </td>
-                        <td></td>
-                      </tr>
+                      {data.cons.map((d) => (
+                        <tr>
+                          <td>
+                            <i class="bi bi-trash"></i>
+                          </td>
+                          <td>
+                            <i class="fa-regular fa-pen-to-square"></i>
+                          </td>
+                          <td>{d.id}</td>
+                          <td>{d.name}</td>
+                          <td>11-7-2014</td>
+                          <td> </td>
+                          <td></td>
+                          <td>Lê thị thu thanh</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
