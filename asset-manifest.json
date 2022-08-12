@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/VISA/static/css/main.74b8c691.css",
+    "main.js": "/VISA/static/js/main.2d219341.js",
+    "static/js/787.28cb0dcd.chunk.js": "/VISA/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/VISA/index.html",
+    "main.74b8c691.css.map": "/VISA/static/css/main.74b8c691.css.map",
+    "main.2d219341.js.map": "/VISA/static/js/main.2d219341.js.map",
+    "787.28cb0dcd.chunk.js.map": "/VISA/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74b8c691.css",
+    "static/js/main.2d219341.js"
+  ]
+}
