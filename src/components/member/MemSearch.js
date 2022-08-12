@@ -19,7 +19,32 @@ function MemSearch(props) {
     };
     getCons();
   }, []);
-
+  // delete consumer
+  const deleteConsumer = (id) => {
+    Util.swal({
+      text: "Bạn muốn xóa khách hàng " + id + " Khỏi hệ thống ?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        fetch(Util.URL_REST + "api/consumer/delete/" + id, {
+          method: "PUT",
+          headers: Util.headersList,
+        })
+          .then((res) => res.json())
+          .then((json) => {
+            if (json.status === "0001") {
+              Util.swal("", json.returnMessage, "success");
+            } else {
+              Util.swal("", json.returnMessage, "error");
+            }
+          });
+      } else {
+        return false;
+      }
+    });
+  };
   function handlePageChange(pageNumber) {
     setActivePage(pageNumber);
     //alert(pageNumber);
@@ -68,7 +93,10 @@ function MemSearch(props) {
                       {data.cons.map((d) => (
                         <tr>
                           <td>
-                            <i class="bi bi-trash"></i>
+                            <i
+                              class="bi bi-trash"
+                              onClick={() => deleteConsumer(d.id)}
+                            ></i>
                           </td>
                           <td>
                             <i class="fa-regular fa-pen-to-square"></i>
