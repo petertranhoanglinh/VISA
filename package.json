@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
   "homepage": "https://petertranhoanglinh.github.io/VISA/",
+=======
+>>>>>>> parent of 0c2de8a2 (1)
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +13,6 @@
     "axios": "^0.27.2",
     "bootstrap-less": "^3.3.8",
     "cors": "^2.8.5",
-    "gh-pages": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-fetch": "^0.0.9",
@@ -24,8 +26,11 @@
   },
   "scripts": {
     "start": "set PORT=3333 && react-scripts start",
+<<<<<<< HEAD
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+=======
+>>>>>>> parent of 0c2de8a2 (1)
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
