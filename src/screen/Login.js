@@ -54,7 +54,7 @@ export default class Login extends React.Component {
           <div className="card card-outline card-primary">
             <div className="card-header text-center">
               <a href="../../index2.html" className="h1">
-                <b>VISA-LOGIN</b>
+                <b>VISA-LOGIN..</b>
               </a>
             </div>
             <div className="card-body">
