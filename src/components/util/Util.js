@@ -2,7 +2,7 @@ import swal from "sweetalert";
 // web
 
 var URL_REST = "https://kalivisabe.herokuapp.com/";
-var URL = "https://petertranhoanglinh.github.io/";
+var URL = "https://kali-visa.herokuapp.com/";
 
 // local
 //var URL_REST = "http://localhost:8888/";
