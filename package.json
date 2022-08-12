@@ -1,4 +1,5 @@
-{ "homepage": "https://petertranhoanglinh.github.io/VISA/",
+{
+  "homepage": "https://petertranhoanglinh.github.io/VISA/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -23,8 +24,8 @@
   },
   "scripts": {
     "start": "set PORT=3333 && react-scripts start",
-    "predeploy":"npm run build",
-    "deloy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
