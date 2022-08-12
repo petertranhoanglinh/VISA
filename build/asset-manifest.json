@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/VISA/static/css/main.74b8c691.css",
-    "main.js": "/VISA/static/js/main.bfe81564.js",
+    "main.js": "/VISA/static/js/main.2b1ab60a.js",
     "static/js/787.28cb0dcd.chunk.js": "/VISA/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/VISA/index.html",
     "main.74b8c691.css.map": "/VISA/static/css/main.74b8c691.css.map",
-    "main.bfe81564.js.map": "/VISA/static/js/main.bfe81564.js.map",
+    "main.2b1ab60a.js.map": "/VISA/static/js/main.2b1ab60a.js.map",
     "787.28cb0dcd.chunk.js.map": "/VISA/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74b8c691.css",
-    "static/js/main.bfe81564.js"
+    "static/js/main.2b1ab60a.js"
   ]
 }
