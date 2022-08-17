@@ -38,7 +38,7 @@ function RegMember() {
         }
       })
       .catch((error) => {
-        alert("consumer fail");
+        Util.swal("", "Please login again", "error");
       });
   };
   return (

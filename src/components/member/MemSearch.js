@@ -100,11 +100,11 @@ function MemSearch(props) {
                           <td>
                             <i
                               class="bi bi-trash"
-                              onClick={() => deleteConsumer(d.mobile)}
+                              onClick={() => deleteConsumer(d.id)}
                             ></i>
                           </td>
                           <td>
-                          <Link to={"/memedit/"+d.id}> <i class="fa-regular fa-pen-to-square"></i></Link>
+                          <Link to={"/memedit/"+d.mobile}> <i class="fa-regular fa-pen-to-square"></i></Link>
                           </td>
                           <td>{d.id}</td>
                           <td>{d.name}</td>
