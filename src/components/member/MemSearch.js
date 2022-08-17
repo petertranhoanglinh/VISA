@@ -8,19 +8,12 @@ function MemSearch(props) {
   // using user effect;
   useEffect(() => {
     const getCons = async () => {
-      fetch(Util.URL_REST + "api/consumer/all/" + mobile, {
-        method: "GET",
-        headers: Util.headersList,
-      })
-        .then((res) => res.json())
-        .then((json) => {
-          setData({ cons: json });
-        });
+      getData(1);
     };
     getCons();
   }, []);
   // delete consumer
-  const deleteConsumer = (id) => {
+  function deleteConsumer(id){
     Util.swal({
       text: "Bạn muốn xóa khách hàng " + id + " Khỏi hệ thống ?",
       icon: "warning",
@@ -36,6 +29,7 @@ function MemSearch(props) {
           .then((json) => {
             if (json.status === "0001") {
               Util.swal("", json.returnMessage, "success");
+              getData(1);
             } else {
               Util.swal("", json.returnMessage, "error");
             }
@@ -45,9 +39,19 @@ function MemSearch(props) {
       }
     });
   };
+  function getData(page){
+    fetch(Util.URL_REST + "api/consumer/all/" + mobile +'/'+page, {
+      method: "GET",
+      headers: Util.headersList,
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        setData({ cons: json });
+      });
+  }
   function handlePageChange(pageNumber) {
     setActivePage(pageNumber);
-    //alert(pageNumber);
+    getData(pageNumber);
   }
   return (
     <div class="content-wrapper">

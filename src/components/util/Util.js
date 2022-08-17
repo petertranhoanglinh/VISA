@@ -1,13 +1,19 @@
 import swal from "sweetalert";
 // web
 
-var URL_REST = "https://kalivisabe.herokuapp.com/";
-var URL = "https://kali-visa.herokuapp.com/";
+var URL_REST = localStorage.getItem("URL_REST");
+var URL = localStorage.getItem("URL");
 
-// local
-//var URL_REST = "http://localhost:8888/";
-//var URL = "http://localhost:3333/";
+function setKind(kind){
+  if(kind === "local"){
+    localStorage.setItem("URL_REST","http://localhost:8888/")
+    localStorage.setItem("URL","http://localhost:3333/")
+  }else{
+    localStorage.setItem("URL_REST","https://kalivisabe.herokuapp.com/")
+    localStorage.setItem("URL","https://kali-visa.herokuapp.com/")
+  }
 
+}
 const token = localStorage.getItem("token");
 const AuthStr = "Bearer " + token;
 const userDetail = JSON.parse(localStorage.getItem("userDetail"));
@@ -58,4 +64,5 @@ export default {
   headersListSave,
   setComma,
   coverSwal,
+  setKind,
 };

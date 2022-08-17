@@ -16,6 +16,10 @@ export default class Login extends React.Component {
   };
 
   login = () => {
+    var url = window.location.href;
+    if(url.includes("localhost")){
+      Util.setKind("local")
+    }
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     var raw = JSON.stringify({
