@@ -65,14 +65,14 @@ function MemSearch(props) {
                   <h3 className="card-title">Thông Tin Thành Viên</h3>
                   <div className="card-tools">
                     <div className="input-group input-group-sm">
-                      <input
+                      <input   onChange={(e) => setMobile(e.target.value)}
                         type="text"
-                        name="table_search"
+                        name="mobile"
                         className="form-control float-right"
-                        placeholder="Search"
+                        placeholder="Search mobile"
                       />
                       <div className="input-group-append">
-                        <button type="submit" className="btn btn-default">
+                        <button className="btn btn-default"  onClick={(e) => getData(1)}>
                           <i className="fas fa-search" />
                         </button>
                       </div>
@@ -100,7 +100,7 @@ function MemSearch(props) {
                           <td>
                             <i
                               class="bi bi-trash"
-                              onClick={() => deleteConsumer(d.id)}
+                              onClick={() => deleteConsumer(d.mobile)}
                             ></i>
                           </td>
                           <td>
