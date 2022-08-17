@@ -1,86 +1,71 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+
 function MemEdit() {
+  let { userId } = useParams();
   return (
     <div className="content-wrapper">
-      <section className="content-header">
-        <div className="container-fluid">
-          <div className="row mb-2">
-            <div className="col-sm-6">
-              <h1>DataTables</h1>
-            </div>
-            <div className="col-sm-6">
-              <ol className="breadcrumb float-sm-right">
-                <li className="breadcrumb-item">
-                  <a href="#">Home</a>
-                </li>
-                <li className="breadcrumb-item active">DataTables</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        {/* /.container-fluid */}
-      </section>
       <section class="content">
-      <div className="container-fluid">
-        <div className="card card-info">
-          <div className="card-header">
-            <h3 className="card-title">Thay đổi thông tin thành viên</h3>
-          </div>
-          <div className="card-body">
-            {/* Color Picker */}
-            <div className="form-group">
-              <label>Tên và SĐT thành viên cần thay đổi</label>
-              <input
-                type="text"
-                className="form-control my-colorpicker1 colorpicker-element"
-                data-colorpicker-id={1}
-                data-original-title
-                title
-              />
+        <div className="container-fluid">
+          <div className="card card-info">
+            <div className="card-header">
+              <h3 className="card-title">
+                Thay đổi thông tin thành viên {userId}
+              </h3>
             </div>
-            {/* /.form group */}
-            {/* Color Picker */}
-            <div className="form-group">
-              <label>Thay đổi email:</label>
-              <div
-                className="input-group my-colorpicker2 colorpicker-element"
-                data-colorpicker-id={2}
-              >
+            <div className="card-body">
+              {/* Color Picker */}
+              <div className="form-group">
+                <label>Tên thành viên cần thay đổi</label>
                 <input
                   type="text"
-                  className="form-control"
-                  data-original-title
-                  title
+                  className="form-control my-colorpicker1 colorpicker-element"
+                  data-colorpicker-id={1}
                 />
               </div>
-              {/* /.input group */}
-            </div>
-            {/* /.form group */}
-            {/* time Picker */}
-            <div className="bootstrap-timepicker">
               <div className="form-group">
-                <label>Thay đổi địa chỉ:</label>
+                <label>Số điện thoại</label>
+                <input
+                  type="number"
+                  className="form-control my-colorpicker1 colorpicker-element"
+                  placeholder="Số điện thoại không được trùng trong hệ thống"
+                />
+              </div>
+              {/* /.form group */}
+              {/* Color Picker */}
+              <div className="form-group">
+                <label>Thay đổi email:</label>
                 <div
-                  className="input-group date"
-                  id="timepicker"
-                  data-target-input="nearest"
+                  className="input-group my-colorpicker2 colorpicker-element"
+                  data-colorpicker-id={2}
                 >
-                  <input
-                    type="text"
-                    className="form-control datetimepicker-input"
-                    data-target="#timepicker"
-                  />
-                  {/* <div className="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
-                  <div className="input-group-text"><i className="far fa-clock" /></div>
-                </div> */}
+                  <input type="text" className="form-control" />
                 </div>
                 {/* /.input group */}
               </div>
               {/* /.form group */}
+              {/* time Picker */}
+              <div className="bootstrap-timepicker">
+                <div className="form-group">
+                  <label>Thay đổi địa chỉ:</label>
+                  <div className="input-group date">
+                    <input
+                      type="text"
+                      className="form-control datetimepicker-input"
+                      data-target="#timepicker"
+                    />
+                    {/* <div className="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+                  <div className="input-group-text"><i className="far fa-clock" /></div>
+                </div> */}
+                  </div>
+                  {/* /.input group */}
+                </div>
+                {/* /.form group */}
+              </div>
             </div>
+            {/* /.card-body */}
           </div>
-          {/* /.card-body */}
         </div>
-      </div>
       </section>
     </div>
   );

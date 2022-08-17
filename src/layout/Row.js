@@ -117,7 +117,6 @@ function Row() {
                 <p>
                   Thành viên
                   <i className="right fas fa-angle-left" />
-                  <span className="badge badge-info right">3</span>
                 </p>
               </a>
               <ul className="nav nav-treeview">
@@ -125,12 +124,6 @@ function Row() {
                   <Link to={"/regmember"} className="nav-link">
                     <i className="far fa-circle nav-icon" />
                     <p>Đăng ký thành viên</p>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to={"/memedit"} className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Thay đổi thành viên</p>
                   </Link>
                 </li>
                 <li className="nav-item">

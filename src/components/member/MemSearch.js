@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
+import { Link} from "react-router-dom";
 import Util from "../util/Util";
 function MemSearch(props) {
   const [data, setData] = useState({ cons: [] });
@@ -103,7 +104,7 @@ function MemSearch(props) {
                             ></i>
                           </td>
                           <td>
-                            <i class="fa-regular fa-pen-to-square"></i>
+                          <Link to={"/memedit/"+d.id}> <i class="fa-regular fa-pen-to-square"></i></Link>
                           </td>
                           <td>{d.id}</td>
                           <td>{d.name}</td>

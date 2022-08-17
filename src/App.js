@@ -40,8 +40,11 @@ function App() {
           <Route path="/" element={<Login></Login>}></Route>
           {/* Member  */}
           <Route path="/regmember" element={<RegMember></RegMember>}></Route>
-          <Route path="/memedit" element={<MemEdit></MemEdit>}></Route>
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
+
+          <Route path="memedit">
+             <Route path=":userId" element={<MemEdit/>} />
+          </Route>
 
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
         </Routes>
