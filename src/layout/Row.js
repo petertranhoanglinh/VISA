@@ -138,7 +138,7 @@ function Row() {
               <a href="1" className="nav-link">
                 <i className="nav-icon fas fa-copy" />
                 <p>
-                  Layout Options
+                  Đặt hàng
                   <i className="fas fa-angle-left right" />
                   <span className="badge badge-info right">6</span>
                 </p>
@@ -147,57 +147,19 @@ function Row() {
                 <li className="nav-item">
                   <a href="../layout/top-nav.html" className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>Top Navigation</p>
+                    <p>Tạo đơn hàng</p>
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="../layout/top-nav-sidebar.html" className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>Top Navigation + Sidebar</p>
+                    <p>Tìm kiếm đơn hàng</p>
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="../layout/boxed.html" className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>Boxed</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../layout/fixed-sidebar.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Fixed Sidebar</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="../layout/fixed-sidebar-custom.html"
-                    className="nav-link"
-                  >
-                    <i className="far fa-circle nav-icon" />
-                    <p>
-                      Fixed Sidebar <small>+ Custom Area</small>
-                    </p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../layout/fixed-topnav.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Fixed Navbar</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../layout/fixed-footer.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Fixed Footer</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="../layout/collapsed-sidebar.html"
-                    className="nav-link"
-                  >
-                    <i className="far fa-circle nav-icon" />
-                    <p>Collapsed Sidebar</p>
+                    <p>Thống kê đặt hàng</p>
                   </a>
                 </li>
               </ul>
