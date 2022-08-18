@@ -17,7 +17,6 @@ function MemEdit() {
   const handleInput = () => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    validateData();
     var raw = JSON.stringify({
       name: name,
       mobile: mobile,
@@ -59,21 +58,11 @@ function MemEdit() {
       .then((res) => res.json())
       .then((json) => {
         setData({ cons: json[0] });
+        setName(json[0].name);
+        setEmail(json[0].email);
+        setMobile(json[0].mobile);
+        setAddress(json[0].address);
       });
-  }
-  function validateData(){
-    if(name === ""){
-      setName(data.cons.name)
-    }
-    if(mobile === ""){
-      setMobile(data.cons.mobile)
-    }
-    if(address === ""){
-      setAddress(data.cons.address)
-    }
-    if(email === ""){
-      setEmail(data.cons.email)
-    }
   }
   return (
     <div className="content-wrapper">
@@ -94,7 +83,7 @@ function MemEdit() {
                   name="name"
                   type="text"
                   className="form-control my-colorpicker1 colorpicker-element"
-                  value={data.cons.name}
+                  value={name}
                 />
               </div>
               <div className="form-group">
@@ -107,7 +96,7 @@ function MemEdit() {
                 <input
                   name="mobile"
                   onChange={(e) => setMobile(e.target.value)}
-                  value={data.cons.mobile}
+                  value={mobile}
                   type="number"
                   className="form-control my-colorpicker1 colorpicker-element"
                 />
@@ -121,7 +110,7 @@ function MemEdit() {
                     onChange={(e) => setEmail(e.target.value)}
                     name="email"
                     type="email"
-                    value={data.cons.email}
+                    value={email}
                     className="form-control"
                   />
                 </div>
@@ -136,7 +125,7 @@ function MemEdit() {
                     <input
                       name="address"
                       onChange={(e) => setAddress(e.target.value)}
-                      value={data.cons.address}
+                      value={address}
                       type="text"
                       className="form-control datetimepicker-input"
                     />
