@@ -5,7 +5,7 @@ import Util from "../util/Util";
 function MemSearch(props) {
   const [data, setData] = useState({ cons: [] });
   const [mobile, setMobile] = useState(["*"]);
-  const [activePage, setActivePage] = useState([]);
+  const [activePage, setActivePage] = useState('');
   // using user effect;
   useEffect(() => {
     const getCons = async () => {
@@ -96,10 +96,10 @@ function MemSearch(props) {
                     </thead>
                     <tbody>
                       {data.cons.map((d) => (
-                        <tr>
+                        <tr key={d.id}>
                           <td>
                             <i
-                              class="bi bi-trash"
+                              className="bi bi-trash"
                               onClick={() => deleteConsumer(d.id)}
                             ></i>
                           </td>

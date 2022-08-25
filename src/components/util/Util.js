@@ -2,11 +2,11 @@ import swal from "sweetalert";
 
 // local
 //var URL_REST = "http://localhost:8888/";
-//var URL = "http://localhost:3333/";
+var URL = "http://localhost:3333/";
 
 //web
 var URL_REST = "https://kalivisabe.herokuapp.com/";
-var URL = "https://kali-visa.herokuapp.com/";
+//var URL = "https://kali-visa.herokuapp.com/";
 
 
 const token = localStorage.getItem("token");

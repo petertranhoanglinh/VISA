@@ -41,11 +41,7 @@ function App() {
           {/* Member  */}
           <Route path="/regmember" element={<RegMember></RegMember>}></Route>
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
-
-          <Route path="memedit">
-             <Route path=":userId" element={<MemEdit/>} />
-          </Route>
-
+          <Route path="memedit/:userId" element={<MemEdit/>} />
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
         </Routes>
       ) : (
