@@ -38,3 +38,5 @@ packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
 node_modules/.cache/default-development/index.pack.old
 node_modules/.cache/.eslintcache
+
+.vercel

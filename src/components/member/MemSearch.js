@@ -104,7 +104,7 @@ function MemSearch(props) {
                             ></i>
                           </td>
                           <td>
-                          <Link to={"/memedit/"+d.mobile}> <i class="fa-regular fa-pen-to-square"></i></Link>
+                          <a href={"/memedit/"+d.mobile}> <i class="fa-regular fa-pen-to-square"></i></a>
                           </td>
                           <td>{d.id}</td>
                           <td>{d.name}</td>
