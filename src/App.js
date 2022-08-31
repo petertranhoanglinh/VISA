@@ -6,6 +6,7 @@ import RegMember from "./components/member/RegMember";
 import MemSearch from "./components/member/MemSearch";
 import MemEdit from "./components/member/MemEdit";
 import Login from "./screen/Login";
+import AddOrder from "./components/order/AddOrder"
 import { Routes, Route } from "react-router-dom";
 import Util from "./components/util/Util";
 function App() {
@@ -43,6 +44,8 @@ function App() {
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
           <Route path="memedit/:userId" element={<MemEdit/>} />
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
+          {/* Order  */}
+          <Route path="/addorder" element={<AddOrder></AddOrder>}></Route>
         </Routes>
       ) : (
         <Login></Login>

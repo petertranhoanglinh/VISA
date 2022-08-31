@@ -145,10 +145,10 @@ function Row() {
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
-                  <a href="../layout/top-nav.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
+                  <Link to={"/addorder"} className="nav-link">
+                   <i className="far fa-circle nav-icon" />
                     <p>Tạo đơn hàng</p>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a href="../layout/top-nav-sidebar.html" className="nav-link">
