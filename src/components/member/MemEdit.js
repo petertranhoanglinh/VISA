@@ -41,7 +41,11 @@ function MemEdit() {
       })
       .then((result) => {
         if (result.status === "0001") {
-          Util.swal("", result.returnMessage, "success");
+          // eslint-disable-next-line no-unused-expressions
+          Util.swal("", result.returnMessage, "success").then (function() {
+            window.location.href = Util.URL + "memsearch";
+          });
+    
         } else {
           Util.swal("", result.returnMessage, "error");
         }

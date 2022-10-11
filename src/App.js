@@ -8,6 +8,7 @@ import MemEdit from "./components/member/MemEdit";
 import Login from "./screen/Login";
 import AddOrder from "./components/order/AddOrder"
 import { Routes, Route } from "react-router-dom";
+import SearchOrder from "./components/order/SearchOrder";
 import Util from "./components/util/Util";
 function App() {
   function checkLogin() {
@@ -16,12 +17,14 @@ function App() {
     })
       .then((res) => res.json())
       .then((json) => {
-        localStorage.setItem("checkLogin", "true");
+        if(json === true){
+          localStorage.setItem("checkLogin", "true");
+        }   
       });
   }
   checkLogin();
   return (
-    <div>
+    <>
       <div class="preloader flex-column justify-content-center align-items-center">
         <img
           class="animation__shake"
@@ -34,6 +37,7 @@ function App() {
       </div>
       <Nav></Nav>
       <Row></Row>
+      <Routes> <Route path="/home" element={<Home></Home>}></Route></Routes>
       {localStorage.getItem("checkLogin") === "true" ? (
         <Routes>
           <Route path="/home" element={<Home></Home>}></Route>
@@ -46,14 +50,16 @@ function App() {
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
           {/* Order  */}
           <Route path="/addorder" element={<AddOrder></AddOrder>}></Route>
+          <Route path="/searchorder" element={<SearchOrder></SearchOrder>}></Route>
         </Routes>
       ) : (
         <Login></Login>
+        
       )}
 
       <Footer></Footer>
       <aside class="control-sidebar control-sidebar-dark"></aside>
-    </div>
+      </>
     // Route path='/' element = {<Home></Home>}/>
   );
 }

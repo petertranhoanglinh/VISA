@@ -2,6 +2,21 @@
 import { Link } from "react-router-dom";
 import Util from "../components/util/Util";
 function Row() {
+  var show = "";
+  var show1 = "";
+  if(localStorage.getItem("checkLogin")){
+       show = "hide";
+       show1 = "none";
+     }else{
+      show = "none";
+      show1 = "hide";
+     }
+  // const [show, setShow] = useState("");
+  // if(localStorage.getItem("checkLogin")){
+  //   setShow({ show: "hide" });
+  // }else{
+  //   setShow({ show: "none" });
+  // }
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
       {/* Brand Logo */}
@@ -18,13 +33,13 @@ function Row() {
       <div className="sidebar">
         {/* Sidebar user (optional) */}
         <div className="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div className="info">
+          <div className="info"  style={{display:show1}}>
             <Link to={"/"} className="d-block">
               Login
             </Link>
           </div>
           <div className="info">
-            <button className="btn btn-sidebar" onClick={logout}>
+            <button className="btn btn-sidebar" style={{display:show}} onClick={logout}>
               LogOut
             </button>
           </div>
@@ -83,33 +98,12 @@ function Row() {
             {/* Add icons to the links using the .nav-icon class
                <br /> with font-awesome or any other icon font library */}
             <li className="nav-item">
-              <a href="1" className="nav-link">
+              <a href="/home" className="nav-link">
                 <i className="nav-icon fas fa-tachometer-alt" />
                 <p>
                   Dashboard
-                  <i className="right fas fa-angle-left" />
                 </p>
               </a>
-              <ul className="nav nav-treeview">
-                <li className="nav-item">
-                  <a href="../../index.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Dashboard v1</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../../index2.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Dashboard v2</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../../index3.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Dashboard v3</p>
-                  </a>
-                </li>
-              </ul>
             </li>
             <li className="nav-item">
               <a href="../widgets.html" className="nav-link">
@@ -121,16 +115,16 @@ function Row() {
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
-                  <Link to={"/regmember"} className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Đăng ký thành viên</p>
-                  </Link>
+                  <a href ={"/regmember"} className="nav-link">
+                    <i className="fa-solid fa-user-plus" style={{marginLeft:10}}></i>
+                    <p style={{marginLeft:10}}>Đăng ký thành viên</p>
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <Link to={"/memsearch"} className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Tìm Kiếm Thành Viên</p>
-                  </Link>
+                  <a href={"/memsearch"} className="nav-link" >
+                    <i className="far fa-circle nav-icon" style={{marginLeft:5}}/>
+                    <p style={{marginLeft:10}}>Tìm Kiếm Thành Viên</p>
+                  </a>
                 </li>
               </ul>
             </li>
@@ -139,27 +133,26 @@ function Row() {
                 <i className="nav-icon fas fa-copy" />
                 <p>
                   Đặt hàng
-                  <i className="fas fa-angle-left right" />
-                  <span className="badge badge-info right">6</span>
+                  <i className="fas fa-angle-left right"  style={{marginLeft:5}}/>
                 </p>
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
-                  <Link to={"/addorder"} className="nav-link">
-                   <i className="far fa-circle nav-icon" />
-                    <p>Tạo đơn hàng</p>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <a href="../layout/top-nav-sidebar.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Tìm kiếm đơn hàng</p>
+                  <a href = {"/addorder"} className="nav-link">
+                  <i className="fa-solid fa-plus" style={{marginLeft:5}}></i>
+                    <p style={{marginLeft:10}}>Tạo đơn hàng</p>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="../layout/boxed.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Thống kê đặt hàng</p>
+                <a href={"/searchorder"} className="nav-link">
+                    <i className="fa-solid fa-magnifying-glass" style={{marginLeft:5}}></i>
+                    <p style={{marginLeft:10}}>Tìm kiếm đơn hàng</p>
+                </a>
+                </li>
+                <li className="nav-item">
+                  <a href="1" className="nav-link">
+                  <i className="fa-solid fa-magnifying-glass-chart" style={{marginLeft:5}}></i>
+                    <p style={{marginLeft:10}}>Thống kê đặt hàng</p>
                   </a>
                 </li>
               </ul>
@@ -568,12 +561,12 @@ function Row() {
 }
 export default Row;
 function logout() {
-  if (localStorage.getItem("token") != null) {
+
     localStorage.removeItem("token");
     localStorage.removeItem("checkLogin");
     localStorage.removeItem("userItem");
     localStorage.removeItem("photo");
     localStorage.removeItem("userDetail");
     window.location.href = Util.URL + "login";
-  }
+  
 }

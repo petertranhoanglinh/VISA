@@ -1,6 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/role-supports-aria-props */
 import { Link } from "react-router-dom";
-import Util from "../components/util/Util";
 import React from "react";
 
 function Nav() {
