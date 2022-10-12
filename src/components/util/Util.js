@@ -5,13 +5,14 @@ import swal from "sweetalert";
 //var URL = "http://localhost:3333/";
 
 //web
-//var URL_REST = "https://kalivisabe.herokuapp.com/";
-//var URL = "https://lwebmanager.herokuapp.com/";
+var URL_REST = "https://kalivisabe.herokuapp.com/";
+var URL = "https://lwebmanager.herokuapp.com/";
 
 //test
-var URL_REST = "https://kalivisabe.herokuapp.com/";
-var URL = "http://localhost:3333/";
+//var URL_REST = "https://kalivisabe.herokuapp.com/";
+//var URL = "http://localhost:3333/";
 
+var URL_SERVICE = "https://tienaodemo12.herokuapp.com/";
 const token = localStorage.getItem("token");
 const AuthStr = "Bearer " + token;
 const userDetail = JSON.parse(localStorage.getItem("userDetail"));
@@ -62,4 +63,5 @@ export default {
   headersListSave,
   setComma,
   coverSwal,
+  URL_SERVICE
 };

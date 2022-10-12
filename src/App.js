@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import SearchOrder from "./components/order/SearchOrder";
 import Util from "./components/util/Util";
 import AnaOrder from "./components/order/AnaOrder";
+import Coin from "./components/charts/Coin";
 function App() {
   checkLogin();
   return (
@@ -51,6 +52,8 @@ function App() {
           <Route path="/addorder" element={<AddOrder></AddOrder>}></Route>
           <Route path="/searchorder" element={<SearchOrder></SearchOrder>}></Route>
           <Route path="/anaorder" element={<AnaOrder></AnaOrder>}></Route>
+           {/* charts  */}
+           <Route path="/coin" element={<Coin></Coin>}></Route>
         </Routes>
       ) : (
         <Login></Login>

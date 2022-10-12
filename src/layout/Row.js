@@ -101,21 +101,21 @@ function Row() {
               <a className="nav-link">
                 <i className="nav-icon fas fa-th" />
                 <p>
-                  Thành viên
+                  Member
                   <i className="right fas fa-angle-left" />
                 </p>
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
                   <Link to ={"/regmember"} className="nav-link">
-                    <i className="fa-solid fa-user-plus" style={{marginLeft:10}}></i>
-                    <p style={{marginLeft:10}}>Đăng ký thành viên</p>
+                    <i className="fa-solid fa-user-plus mg-left-10"></i>
+                    <p className="mg-left-10">Register Member</p>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link to={"/memsearch"} className="nav-link" >
-                    <i className="fa-solid fa-users-between-lines" style={{marginLeft:5}}></i>
-                    <p style={{marginLeft:10}}>Tìm Kiếm Thành Viên</p>
+                    <i className="fa-solid fa-users-between-lines mg-left-5"></i>
+                    <p className="mg-left-10">Search Member</p>
                   </Link>
                 </li>
               </ul>
@@ -124,27 +124,27 @@ function Row() {
               <a href="1" className="nav-link">
                 <i className="nav-icon fas fa-copy" />
                 <p>
-                  Đặt hàng
-                  <i className="fas fa-angle-left right"  style={{marginLeft:5}}/>
+                  Order
+                  <i className="fas fa-angle-left right mg-left-5"/>
                 </p>
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
                   <Link to = {"/addorder"} className="nav-link">
-                  <i className="fa-solid fa-plus" style={{marginLeft:5}}></i>
-                    <p style={{marginLeft:10}}>Tạo đơn hàng</p>
+                  <i className="fa-solid fa-plus mg-left-5"></i>
+                    <p className="mg-left-10">Create Order</p>
                   </Link>
                 </li>
                 <li className="nav-item">
                 <Link to={"/searchorder"} className="nav-link">
-                    <i className="fa-solid fa-magnifying-glass" style={{marginLeft:5}}></i>
-                    <p style={{marginLeft:10}}>Tìm kiếm đơn hàng</p>
+                    <i className="fa-solid fa-magnifying-glass mg-left-5"></i>
+                    <p className="mg-left-10">Search Order</p>
                 </Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/anaorder" className="nav-link">
-                  <i className="fa-solid fa-magnifying-glass-chart" style={{marginLeft:5}}></i>
-                    <p style={{marginLeft:10}}>Thống kê đặt hàng</p>
+                  <i className="fa-solid fa-magnifying-glass-chart mg-left-5"></i>
+                    <p className="mg-left-10">Analyst Order</p>
                   </Link>
                 </li>
               </ul>
@@ -153,33 +153,33 @@ function Row() {
               <a className="nav-link">
                 <i className="nav-icon fas fa-chart-pie" />
                 <p>
-                  Tiện ích biểu đồ 
+                  Charts
                   <i className="right fas fa-angle-left" />
                 </p>
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
+                  <Link to={"coin"} className="nav-link">
+                    <i className="fa-solid fa-coins mg-left-5"></i>
+                    <p className="mg-left-10">Coin Table</p>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <a  className="nav-link">
+                     <i className="fa-solid fa-chart-area mg-left-5"></i>
+                    <p className="mg-left-10">Chart Coin</p>
+                  </a>
+                </li>
+                <li className="nav-item">
                   <a className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Coin Table</p>
+                  <i class="fa-solid fa-chart-simple mg-left-5"></i>
+                    <p className="mg-left-10">Chart Register Member</p>
                   </a>
                 </li>
                 <li className="nav-item">
                   <a  className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Chart Coin</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Chart Register Member</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a  className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Chart Order</p>
+                  <i className="fa-sharp fa-solid fa-magnifying-glass-chart mg-left-5"></i>
+                    <p className="mg-left-10">Chart Order</p>
                   </a>
                 </li>
               </ul>
