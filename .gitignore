@@ -1,6 +1,5 @@
 .DS_STORE
 node_modules
-node_modules
 scripts/flow/*/.flowconfig
 .flowconfig
 *~
@@ -24,7 +23,7 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
-*.yml
+
 
 packages/react-devtools-core/dist
 packages/react-devtools-extensions/chrome/build
