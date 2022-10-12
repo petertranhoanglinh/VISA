@@ -27,7 +27,7 @@ function Row() {
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8" }}
         />
-        <span className="brand-text font-weight-light">VISA</span>
+        <span className="brand-text font-weight-light">Lweb</span>
       </a>
       {/* Sidebar */}
       <div className="sidebar">
