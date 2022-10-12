@@ -10,39 +10,38 @@ import AddOrder from "./components/order/AddOrder"
 import { Routes, Route } from "react-router-dom";
 import SearchOrder from "./components/order/SearchOrder";
 import Util from "./components/util/Util";
+import AnaOrder from "./components/order/AnaOrder";
 function App() {
-  function checkLogin() {
-    fetch(Util.URL_REST + "api/checkLogin/" + localStorage.getItem("token"), {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        if(json === true){
-          localStorage.setItem("checkLogin", "true");
-        }   
-      });
-  }
   checkLogin();
   return (
     <>
       <div class="preloader flex-column justify-content-center align-items-center">
         <img
           class="animation__shake"
-          src="http://kalivisa.com/wp-content/uploads/2022/04/111111111111111.png"
-          alt="VISA"
+          src="https://i.pinimg.com/originals/f8/ee/fc/f8eefcbe4d08d731669690c716b2d9c9.png"
+          alt="LWEB5"
           className="brand-image img-circle elevation-3"
           height="60"
           width="60"
         />
       </div>
-      <Nav></Nav>
-      <Row></Row>
+     
+      {localStorage.getItem("checkLogin") === "true" ? (
+           <>
+            <Nav></Nav>
+            <Row></Row>
+           </>
+          
+       ) : (
+        null
+      )}
       <Routes> <Route path="/home" element={<Home></Home>}></Route></Routes>
       {localStorage.getItem("checkLogin") === "true" ? (
         <Routes>
           <Route path="/home" element={<Home></Home>}></Route>
+          <Route path="/" element={<Home></Home>}></Route>
           {/* login */}
-          <Route path="/" element={<Login></Login>}></Route>
+          {/* <Route path="/" element={<Login></Login>}></Route> */}
           {/* Member  */}
           <Route path="/regmember" element={<RegMember></RegMember>}></Route>
           <Route path="/memsearch" element={<MemSearch></MemSearch>}></Route>
@@ -51,6 +50,7 @@ function App() {
           {/* Order  */}
           <Route path="/addorder" element={<AddOrder></AddOrder>}></Route>
           <Route path="/searchorder" element={<SearchOrder></SearchOrder>}></Route>
+          <Route path="/anaorder" element={<AnaOrder></AnaOrder>}></Route>
         </Routes>
       ) : (
         <Login></Login>
@@ -64,3 +64,15 @@ function App() {
   );
 }
 export default App;
+
+function checkLogin() {
+  fetch(Util.URL_REST + "api/checkLogin/" + localStorage.getItem("token"), {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((json) => {
+      if(json === true){
+        localStorage.setItem("checkLogin", "true");
+      }   
+    });
+}

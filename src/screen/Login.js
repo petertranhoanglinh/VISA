@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Util from "../components/util/Util";
 export default class Login extends React.Component {
@@ -39,6 +40,7 @@ export default class Login extends React.Component {
       })
       .then((result) => {
         localStorage.setItem("token", result.jwt);
+        localStorage.setItem("checkLogin", "true");
         localStorage.setItem("userDetail", JSON.stringify(result.userDetail));
         window.location.href = Util.URL + "home";
       })
@@ -49,12 +51,12 @@ export default class Login extends React.Component {
   };
   render() {
     return (
-      <div className="content-wrapper">
+      <div className="content-wrapper" style={{marginLeft:0}}>
         <section class="content">
           <div className="card card-outline card-primary">
             <div className="card-header text-center">
               <a href="../../index2.html" className="h1">
-                <b>VISA-LOGIN..</b>
+                <b>LWEB-LOGIN..</b>
               </a>
             </div>
             <div className="card-body">

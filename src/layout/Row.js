@@ -23,7 +23,7 @@ function Row() {
       <a href="../../index3.html" className="brand-link">
         <img
           src="http://kalivisa.com/wp-content/uploads/2022/04/111111111111111.png"
-          alt="AdminLTE Logo"
+          alt="Lweb"
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8" }}
         />
@@ -98,12 +98,12 @@ function Row() {
             {/* Add icons to the links using the .nav-icon class
                <br /> with font-awesome or any other icon font library */}
             <li className="nav-item">
-              <a href="/home" className="nav-link">
+              <Link to="/home" className="nav-link">
                 <i className="nav-icon fas fa-tachometer-alt" />
                 <p>
                   Dashboard
                 </p>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a href="../widgets.html" className="nav-link">
@@ -115,16 +115,16 @@ function Row() {
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
-                  <a href ={"/regmember"} className="nav-link">
+                  <Link to ={"/regmember"} className="nav-link">
                     <i className="fa-solid fa-user-plus" style={{marginLeft:10}}></i>
                     <p style={{marginLeft:10}}>Đăng ký thành viên</p>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a href={"/memsearch"} className="nav-link" >
-                    <i className="far fa-circle nav-icon" style={{marginLeft:5}}/>
+                  <Link to={"/memsearch"} className="nav-link" >
+                    <i className="fa-solid fa-users-between-lines" style={{marginLeft:5}}></i>
                     <p style={{marginLeft:10}}>Tìm Kiếm Thành Viên</p>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -138,26 +138,26 @@ function Row() {
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
-                  <a href = {"/addorder"} className="nav-link">
+                  <Link to = {"/addorder"} className="nav-link">
                   <i className="fa-solid fa-plus" style={{marginLeft:5}}></i>
                     <p style={{marginLeft:10}}>Tạo đơn hàng</p>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                <a href={"/searchorder"} className="nav-link">
+                <Link to={"/searchorder"} className="nav-link">
                     <i className="fa-solid fa-magnifying-glass" style={{marginLeft:5}}></i>
                     <p style={{marginLeft:10}}>Tìm kiếm đơn hàng</p>
-                </a>
+                </Link>
                 </li>
                 <li className="nav-item">
-                  <a href="1" className="nav-link">
+                  <Link to="/anaorder" className="nav-link">
                   <i className="fa-solid fa-magnifying-glass-chart" style={{marginLeft:5}}></i>
                     <p style={{marginLeft:10}}>Thống kê đặt hàng</p>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a href="1" className="nav-link">
                 <i className="nav-icon fas fa-chart-pie" />
                 <p>
@@ -306,8 +306,8 @@ function Row() {
                   </a>
                 </li>
               </ul>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <a href="1" className="nav-link">
                 <i className="nav-icon fas fa-book" />
                 <p>
@@ -380,177 +380,7 @@ function Row() {
                   </a>
                 </li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a href="1" className="nav-link">
-                <i className="nav-icon far fa-plus-square" />
-                <p>
-                  Extras
-                  <i className="fas fa-angle-left right" />
-                </p>
-              </a>
-              <ul className="nav nav-treeview">
-                <li className="nav-item">
-                  <a href="1" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>
-                      Login &amp; Register v1
-                      <i className="fas fa-angle-left right" />
-                    </p>
-                  </a>
-                  <ul className="nav nav-treeview">
-                    <li className="nav-item">
-                      <a href="../examples/login.html" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
-                        <p>Login v1</p>
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="../examples/register.html" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
-                        <p>Register v1</p>
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="../examples/forgot-password.html"
-                        className="nav-link"
-                      >
-                        <i className="far fa-circle nav-icon" />
-                        <p>Forgot Password v1</p>
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="../examples/recover-password.html"
-                        className="nav-link"
-                      >
-                        <i className="far fa-circle nav-icon" />
-                        <p>Recover Password v1</p>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <a href="1" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>
-                      Login &amp; Register v2
-                      <i className="fas fa-angle-left right" />
-                    </p>
-                  </a>
-                  <ul className="nav nav-treeview">
-                    <li className="nav-item">
-                      <a href="../examples/login-v2.html" className="nav-link">
-                        <i className="far fa-circle nav-icon" />
-                        <p>Login v2</p>
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="../examples/register-v2.html"
-                        className="nav-link"
-                      >
-                        <i className="far fa-circle nav-icon" />
-                        <p>Register v2</p>
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="../examples/forgot-password-v2.html"
-                        className="nav-link"
-                      >
-                        <i className="far fa-circle nav-icon" />
-                        <p>Forgot Password v2</p>
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
-                        href="../examples/recover-password-v2.html"
-                        className="nav-link"
-                      >
-                        <i className="far fa-circle nav-icon" />
-                        <p>Recover Password v2</p>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <a href="../examples/lockscreen.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Lockscreen</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="../examples/legacy-user-menu.html"
-                    className="nav-link"
-                  >
-                    <i className="far fa-circle nav-icon" />
-                    <p>Legacy User Menu</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../examples/language-menu.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Language Menu</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../examples/404.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Error 404</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../examples/500.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Error 500</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../examples/pace.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Pace</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../examples/blank.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Blank Page</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../../starter.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Starter Page</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <a href="1" className="nav-link">
-                <i className="nav-icon fas fa-search" />
-                <p>
-                  Search
-                  <i className="fas fa-angle-left right" />
-                </p>
-              </a>
-              <ul className="nav nav-treeview">
-                <li className="nav-item">
-                  <a href="../search/simple.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Simple Search</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="../search/enhanced.html" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Enhanced</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
+            </li> */}
           </ul>
         </nav>
         {/* /.sidebar-menu */}

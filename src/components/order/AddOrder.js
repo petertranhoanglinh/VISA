@@ -1,47 +1,48 @@
-import React, { useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+//import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Util from "../util/Util";
+//import Util from "../util/Util";
 function AddOrder() {
-  const [name, setName] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
+  // const [name, setName] = useState("");
+  // const [mobile, setMobile] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [address, setAddress] = useState("");
 
-  const handleInput = () => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    var raw = JSON.stringify({
-      name: name,
-      mobile: mobile,
-      email: email,
-      address: address,
-    });
+  // const handleInput = () => {
+  //   var myHeaders = new Headers();
+  //   myHeaders.append("Content-Type", "application/json");
+  //   var raw = JSON.stringify({
+  //     name: name,
+  //     mobile: mobile,
+  //     email: email,
+  //     address: address,
+  //   });
 
-    var requestOptions = {
-      method: "POST",
-      headers: Util.headersList,
-      body: raw,
-      redirect: "follow",
-    };
-    fetch(Util.URL_REST + "api/consumer/save", requestOptions)
-      .then((response) => {
-        console.log(response);
-        if (response.ok) {
-          return response.json();
-        }
-        throw Error(response.status);
-      })
-      .then((result) => {
-        if (result.status === "0001") {
-          Util.swal("", result.returnMessage, "success");
-        } else {
-          Util.swal("", result.returnMessage, "error");
-        }
-      })
-      .catch((error) => {
-        Util.swal("", "Please login again", "error");
-      });
-  };
+  //   var requestOptions = {
+  //     method: "POST",
+  //     headers: Util.headersList,
+  //     body: raw,
+  //     redirect: "follow",
+  //   };
+  //   fetch(Util.URL_REST + "api/consumer/save", requestOptions)
+  //     .then((response) => {
+  //       console.log(response);
+  //       if (response.ok) {
+  //         return response.json();
+  //       }
+  //       throw Error(response.status);
+  //     })
+  //     .then((result) => {
+  //       if (result.status === "0001") {
+  //         Util.swal("", result.returnMessage, "success");
+  //       } else {
+  //         Util.swal("", result.returnMessage, "error");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       Util.swal("", "Please login again", "error");
+  //     });
+  //};
   return (
     <div className="content-wrapper">
       <section className="content-header">
