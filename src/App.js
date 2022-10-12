@@ -1,3 +1,4 @@
+import React from 'react'
 import Nav from "./layout/Nav";
 import Row from "./layout/Row";
 import Home from "./components/Home";

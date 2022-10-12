@@ -1,3 +1,4 @@
+import React from 'react'
 function Footer(){
     if(localStorage.getItem("checkLogin") === "true"){
         return ( 

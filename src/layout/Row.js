@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
+import React from 'react'
 import { Link } from "react-router-dom";
 import Util from "../components/util/Util";
 function Row() {
