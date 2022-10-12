@@ -22,7 +22,7 @@ function Row() {
       {/* Brand Logo */}
       <a href="../../index3.html" className="brand-link">
         <img
-          src="http://kalivisa.com/wp-content/uploads/2022/04/111111111111111.png"
+          src="https://i.pinimg.com/originals/f8/ee/fc/f8eefcbe4d08d731669690c716b2d9c9.png"
           alt="Lweb"
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8" }}

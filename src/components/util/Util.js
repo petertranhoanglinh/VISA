@@ -6,7 +6,7 @@ import swal from "sweetalert";
 
 //web
 var URL_REST = "https://kalivisabe.herokuapp.com/";
-var URL = "https://kali-visa.herokuapp.com/";
+var URL = "https://lwebmanager.herokuapp.com/";
 
 //test
 //var URL_REST = "https://kalivisabe.herokuapp.com/";
