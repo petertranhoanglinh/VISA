@@ -3,13 +3,10 @@ import { Link } from "react-router-dom";
 import Util from "../components/util/Util";
 function Row() {
   var show = "";
-  var show1 = "";
   if(localStorage.getItem("checkLogin")){
        show = "hide";
-       show1 = "none";
      }else{
       show = "none";
-      show1 = "hide";
      }
   // const [show, setShow] = useState("");
   // if(localStorage.getItem("checkLogin")){
@@ -33,14 +30,9 @@ function Row() {
       <div className="sidebar">
         {/* Sidebar user (optional) */}
         <div className="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div className="info"  style={{display:show1}}>
-            <Link to={"/"} className="d-block">
-              Login
-            </Link>
-          </div>
           <div className="info">
             <button className="btn btn-sidebar" style={{display:show}} onClick={logout}>
-              LogOut
+            <i className="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
             </button>
           </div>
         </div>
@@ -106,7 +98,7 @@ function Row() {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="../widgets.html" className="nav-link">
+              <a className="nav-link">
                 <i className="nav-icon fas fa-th" />
                 <p>
                   Thành viên
@@ -157,41 +149,42 @@ function Row() {
                 </li>
               </ul>
             </li>
-            {/* <li className="nav-item">
-              <a href="1" className="nav-link">
+            <li className="nav-item">
+              <a className="nav-link">
                 <i className="nav-icon fas fa-chart-pie" />
                 <p>
-                  Charts
+                  Tiện ích biểu đồ 
                   <i className="right fas fa-angle-left" />
                 </p>
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
-                  <a href="../charts/chartjs.html" className="nav-link">
+                  <a className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>ChartJS</p>
+                    <p>Coin Table</p>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="../charts/flot.html" className="nav-link">
+                  <a  className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>Flot</p>
+                    <p>Chart Coin</p>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="../charts/inline.html" className="nav-link">
+                  <a className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>Inline</p>
+                    <p>Chart Register Member</p>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="../charts/uplot.html" className="nav-link">
+                  <a  className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>uPlot</p>
+                    <p>Chart Order</p>
                   </a>
                 </li>
               </ul>
             </li>
+             {/*
             <li className="nav-item">
               <a href="1" className="nav-link">
                 <i className="nav-icon fas fa-edit" />

@@ -75,13 +75,13 @@ function MemEdit() {
           <div className="card card-info">
             <div className="card-header">
               <h3 className="card-title">
-                Thay đổi thông tin thành viên {data.cons.name}
+                Change Info Member <span style={{color:'blue'}}> {data.cons.name}</span>
               </h3>
             </div>
             <div className="card-body">
               {/* Color Picker */}
               <div className="form-group">
-                <label>Tên thành viên cần thay đổi</label>
+                <label>Name</label>
                 <input
                   onChange={(e) => setName(e.target.value)}
                   name="name"
@@ -92,9 +92,9 @@ function MemEdit() {
               </div>
               <div className="form-group">
                 <label>
-                  Số điện thoại{" "}
+                  Number Phone{" "}
                   <small style={{ color: "red" }}>
-                    (Số điện thoại không được trùng trong hệ thống)
+                    (The phone number cannot be duplicated in the system)
                   </small>
                 </label>
                 <input
@@ -108,7 +108,7 @@ function MemEdit() {
               {/* /.form group */}
               {/* Color Picker */}
               <div className="form-group">
-                <label>Thay đổi email:</label>
+                <label>Email:</label>
                 <div className="input-group my-colorpicker2 colorpicker-element">
                   <input
                     onChange={(e) => setEmail(e.target.value)}
@@ -124,7 +124,7 @@ function MemEdit() {
               {/* time Picker */}
               <div className="bootstrap-timepicker">
                 <div className="form-group">
-                  <label>Thay đổi địa chỉ:</label>
+                  <label>Address:</label>
                   <div className="input-group date">
                     <input
                       name="address"
@@ -144,7 +144,7 @@ function MemEdit() {
               <div className="card-footer">
                 <button type="button" className="btn btn-primary"
                 onClick={() => handleInput()}>
-                  Thay đổi
+                  Change save
                 </button>
               </div>
             </div>

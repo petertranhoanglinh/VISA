@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
-import { Link} from "react-router-dom";
 import Util from "../util/Util";
 function MemSearch(props) {
   const [data, setData] = useState({ cons: [] });
